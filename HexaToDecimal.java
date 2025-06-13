@@ -13,9 +13,7 @@ public class HexaToDecimal {
         return prod;
     }
 
-    public static void main(String[] args) {
-
-        String hexadecimal = "DADFA";
+    public static int hexToDecimal(String hexadecimal){
         hexadecimal = hexadecimal.toUpperCase();
         int quant = hexadecimal.length();
 
@@ -23,7 +21,7 @@ public class HexaToDecimal {
         int j = 0;
         for(int i = quant - 1; i > -1 ; i--) {
 
-           // System.out.println(hexadecimal.charAt(i));
+            // System.out.println(hexadecimal.charAt(i));
 
             switch (hexadecimal.charAt(i)) {
                 case '0':
@@ -98,6 +96,13 @@ public class HexaToDecimal {
 
         }
 
+        return result;
+    }
+
+    public static void main(String[] args) {
+
+        String hexadecimal = "DADFA";
+        int result = hexToDecimal(hexadecimal);
         System.out.println("Resutado: " + result);
 
     }
